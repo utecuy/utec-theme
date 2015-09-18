@@ -22,7 +22,7 @@ $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom
 //Main BG Color Variables
 $main-bg: #000000;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
-$main-bg-25: lighten($main-bg, 25%); 
+$main-bg-25: lighten($main-bg, 25%);
 
 //Secondary Color Variables
 $secondary: #009de1;
@@ -206,4 +206,59 @@ $video-thumb-url: '../themes/utec-theme/images/edx.png';
 @mixin footer_references_style {
     margin: 0 !important;
     text-align: right;
+}
+
+//-----------------
+// Override CSS
+//-----------------
+html {
+    background-color: $cyan-color !important;
+}
+
+//-----------------
+// Header Styling
+//-----------------
+.home>header {
+    height: 400px;
+
+    .outer-wrapper {
+        padding: 120px 0 !important;
+    }
+}
+
+//-----------------
+// Footer Styling
+//-----------------
+.wrapper-footer {
+    box-shadow: none !important;
+
+    footer {
+        max-width: 1180px;
+        margin: 0 auto;
+
+        .colophon {
+            width: 80%;
+            float: left;
+
+            .nav-colophon li {
+                display: inline-block;
+                height: 35px;
+                float: left;
+                margin: 0 20px 20px 0;
+            }
+
+            .nav-colophon li a {
+                color: #ffffff;
+            }
+        }
+
+        .references {
+            width: 15%;
+            float: right;
+        }
+    }
+
+    .copyright {
+        clear: both;
+    }
 }

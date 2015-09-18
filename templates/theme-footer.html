@@ -1,8 +1,12 @@
 ## mako
-<%! from django.core.urlresolvers import reverse %>
-    <%namespace name='static' file='/static_content.html'/>
-<%! from datetime import datetime %>
-<%! from pytz import UTC %>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+<%!
+  from datetime import date
+%>
 
 <div class="wrapper-footer">
   <footer>
