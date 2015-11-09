@@ -63,10 +63,10 @@ $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
 $header-image: none;
-$header-bg: transparentize(#000000, .50);
+$header-bg: #009de1;
 $courseware-header-image: none;
 $courseware-header-bg: transparentize(lighten($secondary, 18.5%), .25);
-$footer-bg: $secondary;
+$footer-bg: #ffffff;
 $courseware-footer-border: 1px solid $main-bg-60;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
@@ -212,12 +212,16 @@ $video-thumb-url: '../themes/utec-theme/images/edx.png';
 // Override CSS
 //-----------------
 html {
-    background-color: $cyan-color !important;
+    background-color: #ffffff !important;
 }
 
 //-----------------
 // Header Styling
 //-----------------
+header.global {
+  border-bottom: 0px !important;
+}
+
 .home>header {
     height: 400px;
 
@@ -231,6 +235,7 @@ html {
 //-----------------
 .wrapper-footer {
     box-shadow: none !important;
+    border-top: 3px solid #009de1 !important;
 
     footer {
         max-width: 1180px;
@@ -248,7 +253,7 @@ html {
             }
 
             .nav-colophon li a {
-                color: #ffffff;
+                color: #000000;
             }
         }
 
