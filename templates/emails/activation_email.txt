@@ -1,6 +1,6 @@
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 <%! from django.utils.translation import ugettext as _ %>
-${"Thank you for signing up for {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
+${"Gracias por registrarte a {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 
 ${"{platform_name} es una plataforma educativa desarrollada, en primera instancia, para la implementación del Programa de Formación en Ciencias Básicas de UTEC.".format(platform_name=settings.PLATFORM_NAME)}
 
