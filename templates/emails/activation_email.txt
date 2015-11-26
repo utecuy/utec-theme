@@ -1,0 +1,21 @@
+<%namespace file="../main.html" import="stanford_theme_enabled" />
+<%! from django.utils.translation import ugettext as _ %>
+${"Thank you for signing up for {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
+
+${"{platform_name} es una plataforma educativa desarrollada, en primera instancia, para la implementación del Programa de Formación en Ciencias Básicas de UTEC.".format(platform_name=settings.PLATFORM_NAME)}
+
+${"Para continuar con el proceso de registro deberás ingresar al siguiente enlace:"}
+
+% if is_secure:
+  https://${ site }/activate/${ key }
+% else:
+  http://${ site }/activate/${ key }
+% endif
+
+${"Una vez realizada esta acción acceder a los distintos cursos que están online."}
+
+${"Ante cualquier consulta puedes comunicarte a <a href='mailto:entorno.virtual@utec.edu.uy' target='_top'>entorno.virtual@utec.edu.uy</a>"}
+
+${"Saluda Atte,"}
+
+${"Equipo de UTEC"}
