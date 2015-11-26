@@ -14,7 +14,7 @@ ${"Para continuar con el proceso de registro deberás ingresar al siguiente enla
 
 ${"Una vez realizada esta acción acceder a los distintos cursos que están online."}
 
-${"Ante cualquier consulta puedes comunicarte a <a href='mailto:entorno.virtual@utec.edu.uy' target='_top'>entorno.virtual@utec.edu.uy</a>"}
+${"Ante cualquier consulta puedes comunicarte a entorno.virtual@utec.edu.uy"}
 
 ${"Saluda Atte,"}
 
