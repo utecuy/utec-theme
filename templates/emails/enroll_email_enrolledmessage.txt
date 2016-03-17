@@ -9,8 +9,9 @@ ${"Usted ha sido inscrito en el curso {course_name} en {site_name} por un miembr
 		site_name=site_name
 	)}
 
-${"Para acceder a los materiales del curso, primero inicia sesión en https://edu.utec.edu.uy/login y después visita {course_url}".format(
-		course_url=course_url
+${"Para acceder a los materiales del curso, primero inicia sesión en {login_url} y después visita {course_url}".format(
+		course_url=course_url,
+		login_url=reverse('login')
 	)}
 
 ----
