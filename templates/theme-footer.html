@@ -1,15 +1,12 @@
 ## mako
+<%namespace name='static' file='static_content.html'/>
 <%!
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
 %>
-<%namespace name='static' file='/static_content.html'/>
-<%!
-  from datetime import date
-%>
 
-<div class="wrapper-footer">
-  <footer>
+<footer class="footer">
+  <div class="wrapper-footer">
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
@@ -21,7 +18,7 @@
       </nav>
     </div>
     <div class="references">
-      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+      <span>Built on <a href="https://open.edx.org">OpenEdX</a>.</span>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>

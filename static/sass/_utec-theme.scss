@@ -197,73 +197,118 @@ $video-thumb-url: '../themes/utec-theme/images/edx.png';
 //  Mixin Styles
 //-----------------
 @mixin login_register_h1_style {
-    clip: auto !important;
-    height: 50px;
-    width: 550px;
-    top: 0;
+  clip: auto !important;
+  height: 50px;
+  width: 550px;
+  top: 0;
 }
 
 @mixin footer_references_style {
-    margin: 0 !important;
-    text-align: right;
+  margin: 0 !important;
+  text-align: right;
 }
 
 //-----------------
 // Override CSS
 //-----------------
 html {
-    background-color: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 //-----------------
 // Header Styling
 //-----------------
-header.global {
+header.header-global .wrapper-header {
   border-bottom: 0px !important;
+
+  .nav-global li a {
+    color: $black-80;
+  }
+
+  h2.course-header {
+    color: $main-color !important;
+  }
+}
+
+header.header-global .wrapper-header .user {
+  .primary a {
+    box-shadow: none;
+  }
+
+  .user-link {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .label-username {
+    margin: 0 !important;
+    padding: 12px 16px;
+    line-height: 16px;
+  }
+
+  .dropdown {
+    padding: 6px 8px 10px 10px;
+    line-height: 24px;
+    border-radius: 0 4px 4px 0;
+  }
 }
 
 .home>header {
-    height: 400px;
+  height: 460px;
+  margin-top: $header_image_margin;
+  overflow: hidden;
 
-    .outer-wrapper {
-        padding: 120px 0 !important;
-    }
+  .outer-wrapper {
+    padding: 120px 0 !important;
+  }
+
+  .title h2 {
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-style: italic;
+  }
 }
 
 //-----------------
 // Footer Styling
 //-----------------
-.wrapper-footer {
+footer.footer{
+  background: $footer-bg;
+  border-top: 3px solid #009de1 !important;
+  box-shadow: none !important;
+
+  .wrapper-footer {
+    max-width: 1180px;
+    margin: 0 auto;
+    border: 0 !important;
     box-shadow: none !important;
-    border-top: 3px solid #009de1 !important;
+  }
 
-    footer {
-        max-width: 1180px;
-        margin: 0 auto;
+  .colophon {
+    width: 80%;
+    float: left;
 
-        .colophon {
-            width: 80%;
-            float: left;
-
-            .nav-colophon li {
-                display: inline-block;
-                height: 35px;
-                float: left;
-                margin: 0 20px 20px 0;
-            }
-
-            .nav-colophon li a {
-                color: #000000;
-            }
-        }
-
-        .references {
-            width: 15%;
-            float: right;
-        }
+    .nav-colophon li {
+      display: inline-block;
+      height: 35px;
+      float: left;
+      margin: 0 20px 20px 0;
     }
 
-    .copyright {
-        clear: both;
+    .nav-colophon li a {
+      color: #000000;
     }
+  }
+
+  .references {
+    width: 15%;
+    float: right;
+  }
+
+  .copyright {
+    clear: both;
+  }
+}
+
+body.view-in-course .wrapper-footer {
+  @extend .wrapper-footer;
 }
