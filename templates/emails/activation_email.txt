@@ -1,4 +1,4 @@
-<%namespace file="../main.html" import="stanford_theme_enabled" />
+<%namespace file="../main.html" />
 <%! from django.utils.translation import ugettext as _ %>
 ${"Gracias por registrarte a {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 
