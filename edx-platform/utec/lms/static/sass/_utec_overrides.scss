@@ -121,6 +121,25 @@ header.header-global {
   }
 }
 
+header.header-global.slim {
+  background: $header-bg;
+  padding-top: 0;
+
+  .wrapper-header {
+    h1.logo {
+      margin-top: 0;
+
+      img {
+        height:30px !important;
+        margin: 0 !important;
+      }
+    }
+  }
+  h2 {
+    margin-top: 10px;
+    text-shadow: none;
+  }
+}
 
 .home > header {
   height: 460px;
@@ -179,6 +198,3 @@ footer.footer {
   }
 }
 
-body.view-in-course .wrapper-footer {
-  @extend .wrapper-footer;
-}
