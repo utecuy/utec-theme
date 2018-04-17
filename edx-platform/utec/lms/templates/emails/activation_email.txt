@@ -1,7 +1,7 @@
 <%! from django.utils.translation import ugettext as _ %>
 ${"Gracias por registrarte a {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 
-${"{platform_name} (Educación Digital Universitaria de UTEC) es el entorno educativo de UTEC donde se imparten cursos del del Programa de Formación en Ciencias Básicas de UTEC.".format(platform_name=settings.PLATFORM_NAME)}
+${"{platform_name} (Educación Digital Universitaria de UTEC) es el entorno virtual educativo de UTEC donde se imparten distintos tipos de cursos.".format(platform_name=settings.PLATFORM_NAME)}
 
 ${"Para continuar con el proceso de registro deberás ingresar al siguiente enlace:"}
 
@@ -11,7 +11,7 @@ ${"Para continuar con el proceso de registro deberás ingresar al siguiente enla
   http://${ site }/activate/${ key }
 % endif
 
-${"Una vez realizada esta acción, podrás acceder a los distintos cursos que están online."}
+${"Una vez realizada esta acción, podrás acceder a los distintos cursos que están disponibles."}
 
 ${"Ante cualquier consulta puedes comunicarte a {tech_support_email}".format(tech_support_email=settings.TECH_SUPPORT_EMAIL)}
 
