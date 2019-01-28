@@ -1,18 +1,145 @@
+@import 'variables-theme';
+
+///// Home
+
+.content-wrapper.main-container {
+	padding: 0;
+	margin-top: 0;
+}
+
+.home {
+	.banner-home {
+		background-size: cover;
+		background-repeat: no-repeat;
+	} 
+} 
+
+////Page about
+.content-wrapper .course-info {
+	.course-profile .intro-inner-wrapper {
+		background: rgba(251,251,251,0.9);
+	}
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+//// List courses
+.home .courses-container,
+.find-courses .courses-container {
+	max-width: 1300px;
+	padding: 0 15px;
+}
+
+////Course content
+.content-wrapper .course-tabs.navbar,
+.wrapper-course-material.courseware .course-material {
+	overflow: auto;
+}
+
+.course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
+	overflow: inherit;
+}
+
+///Responsive
+@media only screen and (max-width: 768px) {
+
+	//sequence nav
+	.course-content .xmodule_display.xmodule_SequenceModule .sequence-nav {
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+		margin: 0 auto;
+
+		ol {
+			flex-wrap: wrap;
+
+			li {
+				border-right-style: solid;
+				border-left-style: solid;
+			}
+		}
+
+		.sequence-list-wrapper,
+		.sequence-nav-button.button-next,
+		.sequence-nav-button.button-previous {
+			flex: 0 0 100%;
+			max-width: 100%;
+			min-height: 44px;
+			z-index: 2000;
+		}
+
+		.sequence-nav-button.button-next,
+		.sequence-nav-button.button-previous {
+			margin: .75rem 0;
+		}
+	}
+
+	//about page
+
+	.content-wrapper .course-info header.course-profile .intro-inner-wrapper {
+		.table {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		.intro {
+			width: 100%;
+			text-align: center;
+
+			.register {
+				margin: 0 auto;
+			}
+		}
+
+		.media {
+			width: auto;
+
+			img {
+				height: 160px;
+				max-width: 264px;
+			}
+		}
+	}
+
+  .content-wrapper .course-info .course-sidebar {
+    width: 100%;
+  }
+
+  // Dashboard
+  .content-wrapper .dashboard .main-container .my-courses .course .details .wrapper-course-image {
+    display: block;
+    width: 100%;
+
+    .cover {
+      max-width: 184px;
+    }
+
+    img {
+      height: 120px;
+    }
+  }
+}
+
+
 
 //-----------------
 //  Mixin Styles
 //-----------------
-@mixin login_register_h1_style {
-  clip: auto !important;
-  height: 50px;
-  width: 550px;
-  top: 0;
-}
+// @mixin login_register_h1_style {
+//   clip: auto !important;
+//   height: 50px;
+//   width: 550px;
+//   top: 0;
+// }
 
-@mixin footer_references_style {
-  margin: 0 !important;
-  text-align: right;
-}
+// @mixin footer_references_style {
+//   margin: 0 !important;
+//   text-align: right;
+// }
 
 //-----------------
 // Override CSS
@@ -26,7 +153,7 @@ html {
 //-----------------
 header.header-global {
   height: 76px;
-  background: $header-bg;
+ background: $header-bg;
   border-bottom: 0px !important;
 
   .wrapper-header {
@@ -43,7 +170,7 @@ header.header-global {
     }
 
     .primary > a {
-      background-color: $button-bg-color;
+       // background-color: $button-bg-color;
     }
 
     .nav-global {
@@ -52,7 +179,7 @@ header.header-global {
 
     .nav-global li a {
       padding: 5px;
-      color: $black-80;
+      // color: $black-80;
       font-size: 14px;
 
       border: none;
@@ -60,7 +187,7 @@ header.header-global {
     }
 
     h2.course-header {
-      color: $main-color !important;
+      // color: $main-color !important;
     }
 
     .user {
@@ -122,7 +249,7 @@ header.header-global {
 }
 
 header.header-global.slim {
-  background: $header-bg;
+  // background: $header-bg;
   padding-top: 0;
 
   .wrapper-header {
@@ -143,7 +270,7 @@ header.header-global.slim {
 
 .home > header {
   height: 460px;
-  margin-top: $header_image_margin;
+  // margin-top: $header_image_margin;
   overflow: hidden;
 
   .outer-wrapper {
@@ -165,7 +292,7 @@ body.view-in-course .container .home {
 // Footer Styling
 //-----------------
 footer.footer {
-  background: $footer-bg;
+  // background: $footer-bg;
   border-top: 3px solid #009de1 !important;
   box-shadow: none !important;
 
@@ -207,4 +334,6 @@ footer.footer {
 //-----------------
 .course-info header.course-profile {
   height: initial;
+  background-image: $homepage-bg-image;
 }
+
