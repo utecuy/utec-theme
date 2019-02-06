@@ -114,10 +114,26 @@ header.global-header  {
         }
       }
 
-      .main .nav-tab a {
-        border: 0;
-        color: $black-80;
-        font-weight: bold;
+      .main {
+
+        .nav-tab a {
+          border: 0;
+          color: $black-80;
+          font-weight: bold;
+        }
+
+        .nav-item {
+          margin: 0;
+          padding-top: 5px;
+        }
+
+        .nav-item a {
+          background: none;
+          border: 0;
+          color: $black-80;
+          font-weight: bold;
+          padding: 5px 20px;
+        }
       }
     }
 
