@@ -6,18 +6,41 @@
 
 <footer class="footer">
   <div class="wrapper-footer">
-    <div class="colophon">
-      <nav class="nav-colophon">
-        <ol>
-          <li><a href="${reverse('tos')}">Términos y condiciones</a></li>
-          <li><a href="${reverse('courses')}">Cursos</a></li>
-          <li><a href="${reverse('about')}#contact">Contacto</a></li>
-          <li><a href="${reverse('about')}#help">Ayuda</a></li>
-        </ol>
-      </nav>
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-title">Institucional</div>
+        <ul>
+          <li><a href="https://utec.edu.uy/" target="_blank" class="link footer">Acerca de UTEC</a></li>
+          <li><a href="https://taa.utec.edu.uy/" target="_blank" class="link footer">TAA</a></li>
+          <li><a href="https://edu2.utec.edu.uy/#form-row" class="link footer">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="footer-title">Formación</div>
+        <ul>
+          <li><a href="https://utec.edu.uy/formacion/" target="_blank" class="link footer">Carreras</a></li>
+          <li><a href="https://utec.edu.uy/formacion/#programas-especiales" target="_blank" class="link footer">Programas Especiales</a></li>
+          <li><a href="https://edu2.utec.edu.uy/" class="link footer">EDU</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <div class="footer-title">Estudiantes</div>
+        <ul>
+          <li><a href="https://portal.utec.edu.uy/portal/page/portal/uxxiportal/inicio" target="_blank" class="link footer">Portal Académico</a></li>
+          <li><a href="https://ev1.utec.edu.uy/moodle/login/index.php" target="_blank" class="link footer">Entorno Virtual de Aprendizaje</a></li>
+          <li><a href="https://utec.edu.uy/estudiantes/" target="_blank" class="link footer">Novedades</a></li>
+          <li><a href="https://utec.edu.uy/estudiantes/#descargas-row" target="_blank" class="link footer">Descargas</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <img src="${static.url('images/utec-logo-footer.png')}" width="160">
+        <div class="footer-info">(+598) 2603 8832</div>
+        <div class="footer-info">consultas@utec.edu.uy</div>
+        <img src="${static.url('images/taa-logo.png')}" width="160">
+      </div>
     </div>
-    <div class="references">
-      <span>Built on <a href="https://open.edx.org">OpenEdX</a>.</span>
+    <div class="copyright">
+      <p>© 2019 - Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>

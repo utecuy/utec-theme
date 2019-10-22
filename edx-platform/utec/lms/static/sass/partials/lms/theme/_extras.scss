@@ -175,14 +175,62 @@ body.view-in-course .container .home {
 // Footer Styling
 //-----------------
 footer.footer {
-  // background: $footer-bg;
-  border-top: 3px solid #009de1 !important;
+  background: $footer-bg;
   box-shadow: none !important;
 
   .wrapper-footer {
     border: 0 !important;
     box-shadow: none !important;
-    margin: 20px;
+    background: $footer-bg;
+    padding: 6rem 4rem 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-column {
+    width: 25%;
+    padding: 0 15px;
+
+    .footer-title {
+      color: $grey;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .footer-info,
+    img {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 12px;
+      }
+
+      a {
+        color: #fff;
+        font-size: 1.1rem;
+
+        &:hover {
+          text-decoration: none;
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  .copyright p {
+    color: $grey;
+    text-align: center;
+    margin-top: 50px;
   }
 
   .colophon {
@@ -344,6 +392,15 @@ footer.footer {
 
     .colophon {
       width: auto;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      width: 100%;
+
+      .footer-column {
+        width: 100%;
+      }
     }
   }
 }
