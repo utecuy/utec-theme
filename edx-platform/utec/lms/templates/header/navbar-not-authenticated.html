@@ -34,18 +34,12 @@ from six import text_type
       <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
     </div>
   % endif
-  % if allows_login:
-    % if can_discover_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a class="btn" href="/courses">${_('Explore courses')}</a>
-      </div>
-    %endif
-    % if allow_public_account_creation:
-      <div class="mobile-nav-item hidden-mobile nav-item home-buttons">
-        <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
-      </div>
-    % endif
-  % endif
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link" href="https://edu2.utec.edu.uy/cursos/">${_('Cursos')}</a>
+    </div>
+     <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link" href="https://edu2.utec.edu.uy/about/">${_('Acerca de EDU')}</a>
+    </div>
   </div>
   <div class="secondary">
     <div>
@@ -58,6 +52,11 @@ from six import text_type
           <div class="mobile-nav-item hidden-mobile nav-item home-buttons">
             <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
           </div>
+        % endif
+        % if allow_public_account_creation:
+        <div class="mobile-nav-item hidden-mobile nav-item home-buttons">
+          <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
+        </div>
         % endif
       % endif
     </div>
