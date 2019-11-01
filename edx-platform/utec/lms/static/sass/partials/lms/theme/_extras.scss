@@ -32,7 +32,7 @@ h6 {
   .banner-home {
     background-repeat: no-repeat;
     background-size: cover;
-	}
+  }
 }
 
 //-----------------
@@ -236,7 +236,7 @@ header.global-header  {
       top: 25px;
 
       .line {
-        background: $black;
+        background: $black-80;
       }
     }
   }
@@ -506,6 +506,47 @@ footer.footer {
 
     &:hover {
       background-color: #fff;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .window-wrap .global-header {
+    .header-logo a {
+      margin-left: 55px;
+    }
+
+    .hamburger-menu {
+      right: 20px;
+      left: auto;
+    }
+
+    .mobile-menu a {
+      color: $black-80;
+      border: none;
+      position: relative;
+
+      &:hover {
+        background-color: #fff;
+        color: $black-80;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        margin: auto;
+        height: 1px;
+        opacity: .5;
+        background-color: $black-80;
+      }
     }
   }
 }
