@@ -19,24 +19,33 @@
                 {% trans "Account Activation" %}
             </h1>
             <p style="color: rgba(0,0,0,.75);">
-                {% blocktrans %}You're almost there! Use the link below to activate your account to access engaging, high-quality {{ platform_name }} courses. Note that you will not be able to log back into your account until you have activated it.{% endblocktrans %}
+                ¡Gracias por registrarte!
                 <br />
             </p>
-             {% trans "Activate Your Account" as course_cta_text %}
+            <p style="color: rgba(0,0,0,.75);">
+                Bienvenido/a al entorno de Educación Digital Universitaria de UTEC .
+                <br />
+                Para finalizar con el proceso de registro deberás
+            </p>
+              {% trans "ingresar aquí" as course_cta_text %}
             {% include "ace_common/edx_ace/common/return_to_course_cta.html" with course_cta_text=course_cta_text course_cta_url=confirm_activation_link %}
+            <p style="color: rgba(0,0,0,.75);">
+                Una vez registrado/a, podrás acceder a los distintos cursos disponibles.
+                <br />
+            </p>
         </td>
     </tr>
     <tr>
         <td>
             <p style="color: rgba(0,0,0,.75);">
-                {% blocktrans %}Enjoy learning with {{ platform_name }}.{% endblocktrans %}
+                ¿Cómo funciona EDU?. <a href="https://red.utec.edu.uy/estudiantes/edu-estudiantes/primeros-pasos-en-edu-estudiantes/">Accede aquí</a> a videotutoriales que te ayudarán con tus primeros pasos en la plataforma.
                 <br />
             </p>
         </td>
     </tr>
         <td>
             <p style="color: rgba(0,0,0,.75);">
-                {% blocktrans %}If you need help, please use our web form at <a href="{{ support_url }}">{{ support_url }}</a> or email <a href="mailto:{{ support_email }}">{{ support_email }}</a>.{% endblocktrans %}
+                Recuerda que puedes comunicarte a través de <a href="mailto:consultas.edu@utec.edu.uy">consultas.edu@utec.edu.uy</a> por cualquier duda o consulta.
                 <br />
             </p>
         </td>
