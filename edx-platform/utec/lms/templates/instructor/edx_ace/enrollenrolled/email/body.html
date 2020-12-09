@@ -11,14 +11,33 @@
                     You have been enrolled in {{ course_name }}
                 {% endblocktrans %}
             </h1>
-
+            
             <p style="color: rgba(0,0,0,.75);">
-                {% blocktrans %}You have been enrolled in {{ course_name }} at {{ site_name }} by a member of the course staff. This course will now appear on your {{ site_name }} dashboard.{% endblocktrans %}
+                Hola {{ full_name }},
                 <br />
             </p>
 
-            {% trans "Access the Course Materials Now" as course_cta_text %}
+            <p style="color: rgba(0,0,0,.75);">
+                Has sido inscripto por invitación en el curso “{{ course_name }}”. El curso estará visible una vez que accedas, en el panel principal de la plataforma EDU con tu usuario.
+                <br />
+                <br />
+                Para ver los materiales del curso haz
+            </p>
+
+            {% trans "click aquí" as course_cta_text %}
             {% include "ace_common/edx_ace/common/return_to_course_cta.html" with course_cta_text=course_cta_text course_cta_url=course_url %}
+
+            <p style="color: rgba(0,0,0,.75);">
+                Recuerda que puedes comunicarte a través de <a href="mailto:consultas.edu@utec.edu.uy">consultas.edu@utec.edu.uy</a> por cualquier duda o consulta.
+                <br />
+            </p>
+
+            <p style="color: rgba(0,0,0,.75);">
+                ¡Saludos!.
+                <br />
+                Equipo UTEC.
+                <br />
+            </p>
 
             <p style="color: rgba(0,0,0,.75);">
                 {% blocktrans %}This email was automatically sent from {{ site_name }} to {{ full_name }}{% endblocktrans %}
@@ -28,3 +47,4 @@
     </tr>
 </table>
 {% endblock %}
+
