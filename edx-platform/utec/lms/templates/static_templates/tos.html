@@ -1,14 +1,15 @@
 ## mako
 <%!
+  from django.urls import reverse
   from django.conf import settings
-  from django.core.urlresolvers import reverse
+  ##from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
 %>
 <%inherit file="/main.html" />
 
 <%namespace name='static' file='/static_content.html'/>
 
-<%block name="title"><title>Términos y condiciones</title></%block>
+<%block name="  title"><title>Términos y condiciones</title></%block>
 
 <section class="static-container tos">
 
