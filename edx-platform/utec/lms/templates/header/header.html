@@ -16,7 +16,14 @@ from openedx.core.djangolib.markup import HTML, Text
 from branding import api as branding_api
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
-
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+%>
+<%
+options_modal = configuration_helpers.get_value("MODAL_COOKIES", {})
+modal_force_display = options_modal.get("modal_force_display", False)
+name_preference_cookies = options_modal.get("modal_cookies_name_preference", "")
+modal_cookies_text = options_modal.get('modal_cookies_text', "")
+modal_cookies_btn_label = options_modal.get('modal_cookies_btn_label', "")
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -115,3 +122,38 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </form>
     % endif
 % endif
+%if modal_force_display:
+## Pop-up cookies
+<div class="modal-container">
+  <div class="modal-content">
+    ${modal_cookies_text | n}
+    <button class="button-modal btn-primary">${modal_cookies_btn_label}</button>
+  </div>
+</div>
+<script type="text/javascript">
+const cookieAcceptance = localStorage.getItem("cookie-acceptance");
+
+function displayModal() {
+  $(".modal-container").css("display", "block");
+}
+
+function hideModal() {
+  $(".modal-container").css("display", "none");
+}
+function events() {
+  $(".button-modal").on("click", function () {
+    localStorage.setItem("cookie-acceptance", "True");
+    hideModal();
+  });
+}
+
+$(document).ready(function () {
+  if (cookieAcceptance === null) {
+    displayModal();
+    events();
+  }
+});
+
+</script>
+  
+%endif
