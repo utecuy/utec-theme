@@ -133,7 +133,7 @@
     <% } %>
 
     <% if( form === 'login' && name === 'password' ) { %>
-         <button type="button" class="forgot-password field-link"><%- gettext("Forgot password?") %></button>
+         <button type="button" class="forgot-password field-link"><%- gettext("¿Has olvidado la contraseña?") %></button>
         <a href="https://pwm.utec.edu.uy/pwm/public/forgottenpassword"><button type="button" class="field-link"><%- gettext("Recuperación contraseña estudiantes UTEC") %></button></a>
     <% } %>
 </div>
